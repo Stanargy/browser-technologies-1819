@@ -53,24 +53,30 @@ Core Functionality:
 
 Layers:
 
-- Functional / Reliable layer:
-...The reliable layer includes the core functionality as described above, without styling (css) and additional client side javascript features.
+Functional / Reliable layer:
+- The reliable layer includes the core functionality as described above, without styling (css) and additional client side javascript features.
 
-- Usable layer:
-...The usable layer includes the reliable layer with styling to make the view a more pleasureable experience for the user's eye.
+Usable layer:
+- The usable layer includes the reliable layer with styling to make the view a more pleasureable experience for the user's eye.
 
 
-- Pleasureable layer:
-- - The pleasurable layer consists of the core functionality, styling and additional client side javascript features:
-- - Caching
-- - Broadband optimalization
-- - Better support for different user interaction hardware (keyboard, touch, mouse, trackpad) when using drag & drop js.
+Pleasureable layer:
+- The pleasurable layer consists of the core functionality, styling and additional client side javascript features:
+- Caching
+- Broadband optimalization
+- Better support for different user interaction hardware (keyboard, touch, mouse, trackpad) when using drag & drop js.
 
 How does this project include Progressive Enhancement (PE)?
-- - This project includes PE by initially proving the user a default page, gradually 'unlocking' features when a user permits them. This ensures that the core functionality will always be functional and reliable. 
+- This project includes PE by initially proving the user a default page, gradually 'unlocking' features when a user permits them. This ensures that the core functionality will always be functional and reliable. 
 
 The project includes PE for the following features:
-- Custom fonts: 
+- Custom fonts:
+    To make sure any user gets a proper font displayed the default system-ui font is selected. Since this type of css isn't supported by all browsers I've added support for all other system-ui's. If the case comes that all of these are unavailable the browser will turn to the first sans-serif it can get hold of and uses that.
+    ```
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+    ```
 - Images:
 - 
 -  
