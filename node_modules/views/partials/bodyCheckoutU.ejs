@@ -1,0 +1,31 @@
+<% include ./noscript %>
+
+<div id="header">
+    <div id="pizza"> <img src="./assets/pizza.jpg" alt="Pizzaaa" width="200" height="200"></div>
+
+
+    <div class="title">
+    <h3>You've chosen to make your own pizza:</h3>
+    </div>
+    </div>
+
+
+    <div id="checkOutWrapper"><h1>Pizza ingredients: </h1><%  myPizza.forEach((para) =>{ %>
+       <p><%= para %></p> 
+    <% }) %></div>
+
+    <!--
+
+        array =[
+            {
+                id="weet ikveel"
+            }
+            ]
+            array.forEach(function(iterator){
+                iterator.id
+            })
+            
+            array.forEach(iterator=>{
+                
+            })
+            -->

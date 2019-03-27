@@ -1,0 +1,28 @@
+
+<div id="noscript">
+
+<section class="noScriptBanner">
+
+<div class="noScriptBox">
+<noscript>
+We have discovered that you have disabled javascript. <br>
+If you wish to access more funtionalities, please allow Javascript
+</noscript>
+
+</div>
+</section>
+
+</div>
+
+
+<script>
+
+window.addEventListener('load', deleteNoScript, false);
+
+function deleteNoScript(){
+    const noScript = document.querySelector('noscript');
+    noScript.parentNode.removeChild(noScript)
+    console.log('Client Side Javascript is available: deleted noscript')
+}
+</script>
+
