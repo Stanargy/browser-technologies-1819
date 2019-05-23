@@ -2,7 +2,7 @@
 
 <div id="header">
 <div id="pizza"> <img src="./assets/pizza.png" alt="Pizzaaa" width="200" height="200"></div>
-<img src="./assets/bgdough.png"></img>  
+<img src="./assets/bgdough.png" alt="Huge Pizzadough background image"></img>  
 
 <div id="pizzaBGSlices">    
         <div id="pizzaSlice1"> <img src="./assets/pizzapunt2.png" alt="Pizza Punt" width="100" height="100"></div>
@@ -16,29 +16,30 @@
     <div class="title">
             <h3>Choose a Finished Pizza Or make your Own!</h3>
         </div>
+    <h4>Click on a pizza</h4>
+    <h4>Then Click on Checkout</h4>
             
     <div id="kantEnKlaar">   
-    
         <div class="selectPizza"><p>Salami</p>
-            <input tabindex="0" type="radio" id="pizzaSalami" name="pizza" class="pizzaBoxes" value="salami">
-            <label for="pizzaSalami"><img src="./assets/pizzapunt.png" alt="Pizzaaa" width="75" height="75"></label>
+            <input  type="radio" id="pizzaSalami" name="pizza" class="pizzaBoxes" value="salami">
+            <label tabindex="0" for="pizzaSalami"><img src="./assets/pizzapunt.png" alt="Pizzaaa" width="75" height="75"></label>
         </div>
         
 
         <div class="selectPizza"><p>Fish</p>
             <input  type="radio"id="pizzaFish" name="pizza" class="pizzaBoxes" value="fish">
-            <label for="pizzaFish"><img src="./assets/pizzapunt.png" alt="Pizzaaa" width="75" height="75"></label>
+            <label tabindex="0" for="pizzaFish"><img src="./assets/pizzapunt.png" alt="Pizzaaa" width="75" height="75"></label>
         </div>
         
         <div class="selectPizza"><p>Americana</p>
             <input type="radio"id="pizzaAmericana" name="pizza" class="pizzaBoxes" value="Americana">
-            <label for="pizzaAmericana"><img src="./assets/pizzapunt.png" alt="Pizzaaa" width="75" height="75"></label>
+            <label tabindex="0" for="pizzaAmericana"><img src="./assets/pizzapunt.png" alt="Pizzaaa" width="75" height="75"></label>
         </div>
         
         
         <div class="selectPizza"><p>Margerita</p>
             <input type="radio"id="pizzaMargerita" name="pizza" class="pizzaBoxes" value="Margerita">
-            <label for="pizzaMargerita"><img src="./assets/pizzapunt.png" alt="Pizzaaa" width="75" height="75"></label>
+            <label tabindex="0" for="pizzaMargerita"><img src="./assets/pizzapunt.png" alt="Pizzaaa" width="75" height="75"></label>
         </div>
 
     </div>
@@ -58,27 +59,34 @@
     
     <div tabindex="0" class="singleIngredient"> 
         <input type="checkbox" id="sauce" class="ingredients" name="ingredient" value="sauce">
-        <label draggable="true" ondragstart="dragstart_handler(event)" for="sauce"><img src="./assets/sauce.png" alt="sauce" width="75" height="75"></label>
+        <label draggable="true" for="sauce"><img src="./assets/sauce.png" alt="sauce" width="75" height="75"></label>
     </div>
 
     <div tabindex="0" class="singleIngredient"> 
         <input type="checkbox" id="salami" class="ingredients" name="ingredient" value="salami">
-        <label draggable="true" ondragstart="dragstart_handler(event)" for="salami"><img src="./assets/salami.png" alt="salami" width="150" height="75"></label>
+        <label draggable="true" for="salami"><img src="./assets/salami.png" alt="salami" width="150" height="75"></label>
     </div>
 
     <div tabindex="0" class="singleIngredient"> 
         <input type="checkbox" id="cheese" class="ingredients" name="ingredient" value="cheese">
-        <label draggable="true" ondragstart="dragstart_handler(event)" for="cheese"><img src="./assets/cheese.png" alt="cheese" width="75" height="75"></label>
+        <label draggable="true" for="cheese"><img src="./assets/cheese.png" alt="cheese" width="75" height="75"></label>
     </div>
 
     <div tabindex="0" class="singleIngredient"> 
         <input type="checkbox" id="bellPepper" class="ingredients" name="ingredient" value="bellPepper">
-        <label draggable="true" ondragstart="dragstart_handler(event)" for="bellPepper"><img src="./assets/bellpepper.png" alt="bellpepper" width="75" height="75"></label>
+        <label draggable="true" for="bellPepper"><img src="./assets/bellpepper.png" alt="bellpepper" width="75" height="75"></label>
     </div>
     </div>
 
-<div><img  ondrop="drop_handler(event);" ondragover="dragover_handler(event);" src="./assets/emptyDough.png"></img></div>
 
+
+
+
+
+
+<div class="empty footer" ><div class="fill"><img  src="./assets/emptyDough.png"></div>  
+
+</div>
     <button tabindex="0" type="submit" class="submitButton">CheckOut</button>
 
 </form>

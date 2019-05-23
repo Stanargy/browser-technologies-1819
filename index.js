@@ -1,14 +1,15 @@
 (function () {
 
-    var express = require('express');
-    var app = express();
-    var bodyParser = require('body-parser')
-    var fs = require('fs')
-    var path = require('path');
-    var router = require('./router/router');
+    const express = require('express');
+    const app = express();
+    const bodyParser = require('body-parser')
+    const fs = require('fs')
+    const path = require('path');
+    const router = require('./router/router');
    
-   
-   
+    const feature = require('./src/feature.js')
+
+    
    
     // setup template engine
     app.set('view engine', 'ejs');
@@ -20,6 +21,7 @@
     // use bodyparser
     app.use(bodyParser.urlencoded({extended: true}));
     app.use(bodyParser.json())
+    
 
     // use router to handle  all requests
     app.use('/', router);

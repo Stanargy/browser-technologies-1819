@@ -35,23 +35,66 @@ function turnOff(element, turnOffElement){
 
 
 
-function dragstart_handler(ev) {
-    // Add the target element's id to the data transfer object
-    ev.dataTransfer.setData("text/plain", ev.target.id);
-    ev.dropEffect = "move";
-    console.log('dragstarted')
-}
-function dragover_handler(ev) {
-    ev.preventDefault();
-    // Set the dropEffect to move
-    ev.dataTransfer.dropEffect = "move"
-    console.log('moving');
+// This is the drag & drop feature
 
+const fill = document.querySelector('.fill');
+const empties = document.querySelectorAll('.empty');
+
+//Fill Listeners
+fill.addEventListener('dragstart', dragStart);
+fill.addEventListener('dragend', dragEnd);
+
+//Loop through empties
+for (const empty of empties) {
+  empty.addEventListener('dragover', dragOver);
+  empty.addEventListener('dragenter', dragEnter);
+  empty.addEventListener('dragleave', dragLeave);
+  empty.addEventListener('drop', dragDrop);
 }
-function drop_handler(ev) {
-    ev.preventDefault();
-    // Get the id of the target and add the moved element to the target's DOM
-    var data = ev.dataTransfer.getData("text/plain");
-    ev.target.appendChild(document.getElementById(data));
-    console.log('drag dropped')
+
+//Drag functions
+function dragStart(e) {
+    console.log('dragStart')
+    this.classList.add('hold');
+    setTimeout(() => (this.classList.replace('hold', 'invisible'), 0));
+}
+function dragEnd() {
+    this.classList.remove('invisible');
+    console.log('dragEnd')
+}
+
+function dragOver(e) {
+    e.preventDefault();
+    console.log('dragOver')
+}
+
+function dragEnter(e) {
+    e.preventDefault();
+    console.log(e)
+    this.classList.toggle('hovered');
+    console.log('dragEnter')
+}
+
+function dragLeave() {
+    this.classList.remove('hovered');
+    console.log('dragLeave')
+}
+
+function dragDrop(e) {
+    console.log('dragDrop')
+    console.log(e.target)
+    var marginLeft = Math.floor(Math.random() * 250) + 50 + 'px';
+    var marginTop = Math.floor(Math.random() * 100) + 50 + 'px';
+    console.log(marginLeft + '   ' + marginTop)
+    
+    this.append(fill);
+  
+  element = e.currentTarget;
+  element.style.position = 'absolute';
+  element.style.opacity = 1;
+  element.style.zIndex = 100;
+  element.style.marginLeft = marginLeft;
+  element.style.marginTop = marginTop;
+
+  console.log('succesfully dropped')
 }

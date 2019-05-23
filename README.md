@@ -1,7 +1,7 @@
 # BTDemo
-Browser Techonologies Week 2, Demo ----
+Browser Technologies 
 ## Summary
-This is a single page web appication. oba-r
+This is a single page web appication
 
 ## Table of contents
 1. [Live demo](#1-Live-demo)
@@ -15,7 +15,7 @@ This is a single page web appication. oba-r
 9. [Literature](#9-literature)
 
 ## 1. Live Demo
-Still under construction. 
+
 
 ## 2. Install
 To install this project clone it to your device.
@@ -48,9 +48,18 @@ Data is being collected through server side javascript and makes it possible for
 
 ## 8. Feature-Detections
 
-Core Functionality:
+### This site uses feature detection for the following features:
+
+1. Images
+2. Custom fonts
+3. Color <!-- 4. Mouse and trackpad -->
+4. Javascript
+<!-- 6. Cookies -->
+5. Localstorage
+<!-- 8. Broadband Connection -->
 
 
+### Core Functionality
 Layers:
 
 Functional / Reliable layer:
@@ -70,6 +79,7 @@ How does this project include Progressive Enhancement (PE)?
 - This project includes PE by initially proving the user a default page, gradually 'unlocking' features when a user permits them. This ensures that the core functionality will always be functional and reliable. 
 
 The project includes PE for the following features:
+
 - Custom fonts:
     To make sure any user gets a proper font displayed the default system-ui font is selected. Since this type of css isn't supported by all browsers I've added support for all other system-ui's. If the case comes that all of these are unavailable the browser will turn to the first sans-serif it can get hold of and uses that.
     ```
@@ -78,9 +88,27 @@ The project includes PE for the following features:
         "Droid Sans", "Helvetica Neue", sans-serif;
     ```
 - Images:
-- 
--  
+    To ensure PE for images symantic HTML has been used in the form of -alt tags. 
+
+- Mouse / Trackpad
+    Semantic HTML has been used to support navigation throughout the site by keyboard. By this I mean that all interactive elements wrapped in either checkbox, radio-button, button or a tags.
+
+-  Cookies
+
+- Localhost
 
 
 # 9. Literature
 
+`fEEDBACK
+
+MAAK LAGEN SCRHIJF DAAROP FUCNTIONAL PLE USA
+DIT IS FUNCTIONAL LAAG
+
+vanaf nu usable laag eerst maken
+meer features die productiever etc
+meer leuker maken in de pleasurable laag
+
+
+Status:
+ halverwege de 2e laag

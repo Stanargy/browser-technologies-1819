@@ -21,7 +21,7 @@ window.addEventListener('load', deleteNoScript, false);
 
 function deleteNoScript(){
     const noScript = document.querySelector('noscript');
-    noScript.parentNode.removeChild(noScript)
+    noscript.innerHTML = '';
     console.log('Client Side Javascript is available: deleted noscript')
 }
 </script>
